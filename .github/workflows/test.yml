@@ -1,9 +1,14 @@
+env:
+  ADB_INSTALL_TIMEOUT: 20m
+
 ## 1
 name: Test and deploy
 
 ## Actions that will be executed when you push code currently none
 on:
   push:
+    tags:
+      - 'v*'
 
 ## 2
 jobs:
